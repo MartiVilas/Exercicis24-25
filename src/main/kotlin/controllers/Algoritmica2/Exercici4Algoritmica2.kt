@@ -1,4 +1,4 @@
-package controllers
+package controllers.Algoritmica2
 
 import utils.*
 
@@ -10,7 +10,6 @@ import utils.*
 fun main(){
     println("Exercici 4")
 
-    println("Exercici 3")
     print("Hola dame la cantidad de productos que vas a introducir: ")
     var total = 0.0
     val cantidadDeProducto= llegirInt()
@@ -35,6 +34,7 @@ fun main(){
     }
 
     var media= total/cantidadDeProducto
+
     println("La media de precio de los productos es: $media")
     println("El precio mas grande que nos has dado es: $precioMayor")
     println("El precio mas pequeño que nos has dado es: $precioMenor")

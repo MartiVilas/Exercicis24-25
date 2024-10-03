@@ -16,7 +16,7 @@ fun llegirInt():Int {
         error=false
     }else {
         scanner.nextLine()
-        println("${RED}ERROR HA DE SER UN ENTER${RESET}")
+        println("${RED}ERROR HA DE SER UN NÚMERO ENTER${RESET}")
     }
     }while (error)
     return num

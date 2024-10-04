@@ -12,11 +12,12 @@ fun main(){
      */
     println("Exercici 2")
 
-    println("Introdueix un número entre 1 i 10")
-    val num:Int= llegirInt()
+    print("Introdueix un número entre 1 i 10: ")
+    val num:Int = llegirInt()
+
     if (num>10){
         println("${RED}ERROR, el número ha de ser menor de 10${RESET}")
-    }else if (num<0){
+    }else if (num<1){
         println("${RED}ERROR, el número ha de ser mayor de 0${RESET}")
     }else {
         println("El número que has dado es: ${YELLOW_BOLD}$num${RESET}")

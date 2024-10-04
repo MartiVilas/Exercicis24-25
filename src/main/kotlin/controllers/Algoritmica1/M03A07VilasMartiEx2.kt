@@ -1,7 +1,5 @@
 package controllers.Algoritmica1
 
-import utils.*
-
 fun main(){
     /**
      * Algoritme que demana una paraula a l'usuari i la mostra 100 vegades.

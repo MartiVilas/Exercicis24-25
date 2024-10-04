@@ -3,7 +3,7 @@ package utils
 import java.util.*
 
 /**
- *Document kt dedicat al emmagatzematge de funcions de lectura de Int, Double, Float, Long, Word, Char per poder usar
+ * Document kt dedicat al emmagatzematge de funcions de lectura de Int, Double, Float, Long, Word, Char per poder usar
  * en les funcions dels projectes.
  * @author Raimon Izard, David Marin i Martí Vilàs.
  */
@@ -151,6 +151,7 @@ fun readInt ():Int {
     return num
 
 }
+
 fun llegirEntre1o2(): Int {
     val scanner = Scanner(System.`in`)
     var numero: Int = 0

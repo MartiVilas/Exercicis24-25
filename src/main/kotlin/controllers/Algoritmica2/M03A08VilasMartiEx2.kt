@@ -27,7 +27,7 @@ fun main(){
             println("El número ha de ser entre 1 i 10, este número no se cuenta.")
         } else {
             when (nota) {
-                0.0, 1.0, 2.0, 3.0, 4.0 -> suspes++
+                 in 0.0 .. 5.0-> suspes++
                 5.0 -> aprovat++
                 6.0 -> be++
                 7.0, 8.0 -> notable++

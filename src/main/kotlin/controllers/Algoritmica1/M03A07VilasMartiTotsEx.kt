@@ -1,26 +1,26 @@
 package controllers.Algoritmica1
 import utils.*
 
-fun main(){
+/**
+ * Menú que mostra tots els 6 exercicis que hi ha de algoritmica 1
+ * @author Martí Vilàs
+ * @since 4 d'Oct 2024
+ */
 
-    /**
-     * Menú que mostra tots els 6 exercicis que hi ha de algoritmica 1
-     * @author Martí Vilàs
-     * @since 4 d'Oct 2024
-     */
+fun main(){
 
     do {
         println(
             """
             Hola benvinugt al menú dels exercicis d'algorítmica, aquí mostrarem els 6 primer exercicis de bucles.
             Per veure el exercici en concret introdueix els seguents números: 
-            ${YELLOW_BRIGHT}1.${RESET} ${GREEN_BOLD}Algoritme que mostra els números del 10 al 0, i al final, BOOOOOM!!${RESET}
-            ${YELLOW_BRIGHT}2.${RESET} ${GREEN_BOLD}Algoritme que demana una paraula a l'usuari i la mostra 100 vegades.${RESET}
-            ${YELLOW_BRIGHT}3.${RESET} ${GREEN_BOLD}Algoritme que demana l'edat i mostra els anys que aquest ha anat complint (1, 2, 3...).${RESET}
-            ${YELLOW_BRIGHT}4.${RESET} ${GREEN_BOLD}Algoritme que demana un número, i mostra seqüencialment des d'aquest número fins al 0 (inclòs).${RESET}
-            ${YELLOW_BRIGHT}5.${RESET} ${GREEN_BOLD}Algoritme que mostra la taula de multiplicar del 3.${RESET}
-            ${YELLOW_BRIGHT}6.${RESET} ${GREEN_BOLD}Algoritme que demana un número i mostra per pantalla la seva taula de multiplicar.${RESET}
-            ${CYAN_BRIGHT}7.${RESET} Per sortir del menú.
+                 ${YELLOW_BRIGHT}1.${RESET} ${GREEN_BOLD}Algoritme que mostra els números del 10 al 0, i al final, BOOOOOM!!${RESET}
+                 ${YELLOW_BRIGHT}2.${RESET} ${GREEN_BOLD}Algoritme que demana una paraula a l'usuari i la mostra 100 vegades.${RESET}
+                 ${YELLOW_BRIGHT}3.${RESET} ${GREEN_BOLD}Algoritme que demana l'edat i mostra els anys que aquest ha anat complint (1, 2, 3...).${RESET}
+                 ${YELLOW_BRIGHT}4.${RESET} ${GREEN_BOLD}Algoritme que demana un número, i mostra seqüencialment des d'aquest número fins al 0 (inclòs).${RESET}
+                 ${YELLOW_BRIGHT}5.${RESET} ${GREEN_BOLD}Algoritme que mostra la taula de multiplicar del 3.${RESET}
+                 ${YELLOW_BRIGHT}6.${RESET} ${GREEN_BOLD}Algoritme que demana un número i mostra per pantalla la seva taula de multiplicar.${RESET}
+                 ${CYAN_BRIGHT}7.${RESET} Per sortir del menú.
         """.trimIndent())
         println()
         print("Quin exercici vols veure: ")

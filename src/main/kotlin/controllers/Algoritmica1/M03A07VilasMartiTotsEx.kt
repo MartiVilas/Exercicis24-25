@@ -22,6 +22,7 @@ fun main(){
             ${YELLOW_BRIGHT}6.${RESET} ${GREEN_BOLD}Algoritme que demana un número i mostra per pantalla la seva taula de multiplicar.${RESET}
             ${CYAN_BRIGHT}7.${RESET} Per sortir del menú.
         """.trimIndent())
+        println()
         print("Quin exercici vols veure: ")
         val opcioUsuari: Int = llegirInt()
 
@@ -36,6 +37,7 @@ fun main(){
                             println("${RED}BOOOOOOOOM!!!!$RESET")
                         }
                     }
+                    println()
                 }
                 2 -> {
                     println("Exercici 2")
@@ -44,6 +46,8 @@ fun main(){
                     for (i in 1..100){
                         println("${GREEN_BRIGHT}$i${RESET}. $paraula")
                     }
+                    println()
+
                 }
                 3 -> {
                     do {
@@ -62,6 +66,8 @@ fun main(){
                             }
                         }
                     } while (edat<0)
+                    println()
+
                 }
                 4 -> {
                     println("Digues un número, jo contaré des de aquest número fins a 0")
@@ -70,12 +76,16 @@ fun main(){
                     for(i in numUsuari downTo 0){
                         println("$i")
                     }
+                    println()
 
                 }
                 5 -> {
+                    println("A continuació et mostraré la taula de multiplicar del 3")
                     for (i in 1..10) {
-                        println("$i x 3 = ${i*3}")
+                        println("3 x $i = ${i*3}")
                     }
+                    println()
+
                 }
                 6 -> {
                     do {
@@ -92,11 +102,15 @@ fun main(){
                             }
                         }
                     } while (numUsuari > 10 || numUsuari < 0)
+                    println()
+
                 }
                 7 -> println("${PURPLE_BRIGHT}D'acrod, espero que t'hagin agradat els exercicis $RESET")
             }
         } else{
             println("$RED ERA FÀCIL, ERA UN NÚMERO ENTRE 1 I 7!!!!$RESET")
+            println()
+
         }
     } while (opcioUsuari != 7)
 }

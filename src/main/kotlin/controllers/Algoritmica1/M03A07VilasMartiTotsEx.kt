@@ -47,7 +47,6 @@ fun main(){
                         println("${GREEN_BRIGHT}$i${RESET}. $paraula")
                     }
                     println()
-
                 }
                 3 -> {
                     do {
@@ -67,7 +66,6 @@ fun main(){
                         }
                     } while (edat<0)
                     println()
-
                 }
                 4 -> {
                     println("Digues un número, jo contaré des de aquest número fins a 0")
@@ -77,7 +75,6 @@ fun main(){
                         println("$i")
                     }
                     println()
-
                 }
                 5 -> {
                     println("A continuació et mostraré la taula de multiplicar del 3")
@@ -85,7 +82,6 @@ fun main(){
                         println("3 x $i = ${i*3}")
                     }
                     println()
-
                 }
                 6 -> {
                     do {
@@ -103,14 +99,12 @@ fun main(){
                         }
                     } while (numUsuari > 10 || numUsuari < 0)
                     println()
-
                 }
                 7 -> println("${PURPLE_BRIGHT}D'acrod, espero que t'hagin agradat els exercicis $RESET")
             }
         } else{
             println("$RED ERA FÀCIL, ERA UN NÚMERO ENTRE 1 I 7!!!!$RESET")
             println()
-
         }
     } while (opcioUsuari != 7)
 }

@@ -8,13 +8,21 @@ import java.util.*
  * @author Raimon Izard, David Marin i Martí Vilàs.
  */
 fun llegirInt():Int {
+    //cridem a la llibreria de Scanner
     val scanner=Scanner(System.`in`)
+    // instanciem una variable entera, ja que el que volem llegir es un enter
     var num:Int=0
+    // fem una variable de control pel do while
     var error = true
-    do {if (scanner.hasNextInt()){
+
+    do {
+
+        if (scanner.hasNextInt()){
+        // si el buffer conté un número llavors llegim el número del buffer y el error es torna false per poder sortir
         num=scanner.nextInt()
         error=false
     }else {
+        // si el buffer no conté cap número llavors mostra un missatge d'error
         scanner.nextLine()
         println("${RED}ERROR HA DE SER UN NÚMERO ENTER${RESET}")
     }

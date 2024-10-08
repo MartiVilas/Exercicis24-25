@@ -19,7 +19,7 @@ fun main(){
                  ${YELLOW_BRIGHT}4.${RESET} ${GREEN_BOLD} Algoritme igual a l'anterior, mostrant al final el preu menor i el major. ${RESET}
                  ${CYAN_BRIGHT}5. Per sortir${RESET}
         """.trimIndent())
-
+        print("Quin exercici vols veure: ")
         val opcio:Int= llegirInt()
 
         if (opcio in 1..5){

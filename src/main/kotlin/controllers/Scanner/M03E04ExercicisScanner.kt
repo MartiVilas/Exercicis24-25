@@ -7,13 +7,15 @@ fun main(){
     var mesUsuari:Int
 
     do {
+        var error:Boolean=true
+
         println("""
             Benvingut al informatiu del zodiac. 
             Prem 1 per que et digui de quin signe del zodiac ets.
             Prem 2 per sortir.
             """.trimIndent())
         print("Digues la teva opció: ")
-        val opcioUsuari:Int = llegirInt()
+        var opcioUsuari:Int = llegirInt()
         if (opcioUsuari==1){
             println("""
              Necesitaré que em diguis en quin mes vas neixer, 
@@ -251,7 +253,7 @@ fun main(){
                 println()
             }
         }
-
-    }while (opcioUsuari != 2)
+        error = false
+    }while (error)
 
 }

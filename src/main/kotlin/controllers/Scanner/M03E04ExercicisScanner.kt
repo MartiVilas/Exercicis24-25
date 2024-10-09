@@ -7,7 +7,7 @@ fun main(){
     var mesUsuari:Int
 
     do {
-        var error:Boolean=false
+        var error:Boolean=true
 
         println("""
             Benvingut al informatiu del zodiac.
@@ -34,6 +34,7 @@ fun main(){
             } else{
                 println("L'any de neixament es $anyUsuari")
                 error=false
+                println()
             }
         }while(error)
 
@@ -54,6 +55,8 @@ fun main(){
             }else {
                 println("El mes de neixament es $mesUsuari")
                 error=false
+                println()
+
             }
         }while(error)
 
@@ -78,129 +81,166 @@ fun main(){
 
         when(mesUsuari) {
             1,3,5,7,8,10,12 -> {
+                println("Ara et demanaré que em donis el teu dia de neixament en números enters")
+                print("Si us plau introdueix el teu dia de neixement (repeteixo en números): ")
                 val diaNeix:Int = llegirInt()
                 if (diaNeix<=0 || diaNeix>31){
                     println("Jo no crec que sigui aquest dia")
+                    println()
                 }else{
                     when(mesUsuari){
                         1-> {
                             if (diaNeix in 1..19){
                                 println("Capricornio")
+                                println()
                             }else {
                                 println("Acuario")
+                                println()
                             }
                         }
                         3-> {
                             if (diaNeix in 1..20){
                                 println("Piscis")
+                                println()
                             } else {
                                 println("Aries")
+                                println()
                             }
                         }
                         5-> {
                             if (diaNeix in 1..20){
                                 println("Tauro")
+                                println()
                             } else {
                                 println("Géminis")
+                                println()
                             }
                         }
                         7->{
                             if (diaNeix in 1..20){
                                 println("Cancer")
+                                println()
                             } else {
                                 println("Leo")
+                                println()
                             }
                         }
                         8->{
                             if (diaNeix in 1..22){
                                 println("Leo")
+                                println()
                             } else {
                                 println("Virgo")
+                                println()
                             }
                         }
                         10->{
                             if (diaNeix in 1..22){
                                 println("Libra")
+                                println()
                             }else{
                                 println("Escorpio")
+                                println()
                             }
                         }
                         12->{
                             if (diaNeix in 1..21){
                                 println("Sagitario")
+                                println()
                             }else {
                                 println("Capricornio")
+                                println()
                             }
                         }
                     }
                 }
             }
             4,6,9,11 -> {
+                println("Ara et demanaré que em donis el teu dia de neixament en números enters")
+                print("Si us plau introdueix el teu dia de neixement (repeteixo en números): ")
                 val diaNeix:Int = llegirInt()
                 if (diaNeix<=0 || diaNeix>30){
                     println("Jo no crec que sigui aquest dia")
+                    println()
                 }else{
                     when(mesUsuari){
                         4->{
                             if (diaNeix in 1..19){
                                 println("Aries")
+                                println()
                             }else {
                                 println("Tauro")
+                                println()
                             }
                         }
                         6->{
                             if (diaNeix in 1..20){
                                 println("Geminis")
+                                println()
                             }else{
                                 println("Cancer")
+                                println()
                             }
                         }
                         9->{
                             if (diaNeix in 1..22){
                                 println("Virgo")
+                                println()
                             }else {
                                 println("Libra")
+                                println()
                             }
                         }
                         11->{
                             if (diaNeix in 1..21){
                                 println("Escorpio")
+                                println()
                             }else{
                                 println("Sagitario")
+                                println()
                             }
                         }
                     }
                 }
             }
             2 -> {
+                println("Ara et demanaré que em donis el teu dia de neixament en números enters")
+                print("Si us plau introdueix el teu dia de neixement (repeteixo en números): ")
                 val diaNeix:Int = llegirInt()
                 if (anyUsuari%4==0 || anyUsuari%400==0){
                     if (diaNeix<=0 || diaNeix>29){
                         println("Jo no crec que sigui aquest dia")
+                        println()
                     }else {
                         if (diaNeix in 1..18) {
                             println("Acuario")
+                            println()
                         } else  {
                             println("Piscis")
+                            println()
                         }
                     }
                 }
                 if (diaNeix<=0 || diaNeix>28){
                     println("Jo no crec que sigui aquest dia")
+                    println()
 
                 }else{
                     if (diaNeix in 1..18){
                         println("Acuario")
+                        println()
                     }else {
                         println("Piscis")
+                        println()
                     }
                 }
             }
             else -> {
                 println("${RED}ERROR NO FAS CAS AL QUE S'HA DIT!!!${RESET}")
+                println()
             }
         }
-        error=true
+        error = false
     }while (error)
 
 }

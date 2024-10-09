@@ -8,7 +8,6 @@ fun main(){
 
     do {
         var error:Boolean=true
-
         println("""
             Benvingut al informatiu del zodiac.
             Necesitaré que em diguis en quin mes vas neixer, 
@@ -76,7 +75,12 @@ fun main(){
         */
 
         /**
-         *
+         * Amb el següent when agafem el mes que ha introduit l'usuari i processem la informació que ens ha donat, depenent del mes que ens hagi donat
+         * el mes tindrà o 30 o 31 dies, llavors si el mes te 31 dies entre a una part del when si en te 30 entrarà a una altre.
+         * Una vegada dins del when demanem el dia de neixement i a partir del dia de neixement processem la informació i li diem quin signe del zodiac és.
+         * @author Martí Vilàs
+         * @since 9 d'Oct 2024
+         * @see llegirInt()
          */
 
         when(mesUsuari) {

@@ -7,12 +7,19 @@ fun main(){
     var mesUsuari:Int
 
     do {
-        var error:Boolean=true
         println("""
-            Benvingut al informatiu del zodiac.
-            Necesitaré que em diguis en quin mes vas neixer, 
-            i a continuació a quin dia. Al final et diré de quin signe del zodiac ets.
+            Benvingut al informatiu del zodiac. 
+            Prem 1 per que et digui de quin signe del zodiac ets.
+            Prem 2 per sortir.
             """.trimIndent())
+        print("Digues la teva opció: ")
+        val opcioUsuari:Int = llegirInt()
+        if (opcioUsuari==1){
+            println("""
+             Necesitaré que em diguis en quin mes vas neixer, 
+             i a continuació a quin dia. Al final et diré de quin signe del zodiac ets.
+            """.trimIndent())
+        }
         println()
 
         /**
@@ -244,7 +251,7 @@ fun main(){
                 println()
             }
         }
-        error = false
-    }while (error)
+
+    }while (opcioUsuari != 2)
 
 }

@@ -14,9 +14,7 @@ fun llegirInt():Int {
     var num:Int=0
     // fem una variable de control pel do while
     var error = true
-
     do {
-
         if (scanner.hasNextInt()){
         // si el buffer conté un número llavors llegim el número del buffer y el error es torna false per poder sortir
         num=scanner.nextInt()
@@ -44,7 +42,7 @@ fun llegirDouble():Double {
     return num
 }
 
-fun llegirFloat( pMissatgeEntrada: String, pMissatgeError: String):Float {
+fun llegirFloat():Float {
     val scanner=Scanner(System.`in`)
     var num:Float = 0.0f
     var error = true
@@ -53,6 +51,7 @@ fun llegirFloat( pMissatgeEntrada: String, pMissatgeError: String):Float {
         error=false
     }else {
         scanner.nextLine()
+        println("${RED}ERROR HA DE SER UN NÚMERO FLOAT${RESET}")
     }
     }while (error)
     return num

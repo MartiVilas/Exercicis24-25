@@ -10,7 +10,7 @@
         <option name="gradleJvm" value="openjdk-23" />
         <option name="modules">
           <set>
-            <option value="/dades/MartiVilas/M03/Exercicis24-25" />
+            <option value="$PROJECT_DIR$" />
           </set>
         </option>
       </GradleProjectSettings>

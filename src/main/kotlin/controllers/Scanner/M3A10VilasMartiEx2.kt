@@ -1,5 +1,7 @@
 package controllers.Scanner
 import utils.*
+import java.awt.datatransfer.UnsupportedFlavorException
+import java.time.temporal.IsoFields
 import kotlin.math.*
 
 fun main() {
@@ -27,8 +29,23 @@ fun main() {
             1->{
                 println("Comprovarem si poden ser els costats d'un triangle")
                 println()
+                println("Introdueix el valor de a")
+                val a:Float = llegirFloat()
+
+                println("Introdueix el valor de b")
+                val b:Float = llegirFloat()
+
+                println("Introdueix el valor de c")
+                val c:Float = llegirFloat()
+                val desigualtatTriangular:Boolean =  ((abs(a-c) < b) && (b < (a+c)))
 
 
+                if (desigualtatTriangular) {
+                    println("El triangle en el que el costat a és: $a, el costat b és: $b i el costat c és: $c, és un triangle ")
+                }else{
+                    println("El triangle en el que el costat a és: $a, el costat b és: $b i el costat c és: $c, no és un triangle ")
+
+                }
 
             }
             2->{
@@ -37,13 +54,13 @@ fun main() {
 
                 print("Introdueix el valor de a: ")
                 var a2:Double = llegirDouble()
-                a2=Math.pow(a2,2.0)
+                a2= a2.pow(2.0)
                 print("Introdueix el valor de b: ")
                 var b2:Double = llegirDouble()
-                b2=Math.pow(b2,2.0)
+                b2= b2.pow(2.0)
                 print("Introdueix el valor de c: ")
                 var c2:Double = llegirDouble()
-                c2=Math.pow(c2,2.0)
+                c2= c2.pow(2.0)
 
                 if(a2 == (b2+c2)){
                     println()
@@ -59,6 +76,22 @@ fun main() {
             3->{
                 println("Mirarem si es equilàter, iscòceles o escalè")
                 println()
+                println("Introdueix el valor de a")
+                val a:Float = llegirFloat()
+
+                println("Introdueix el valor de b")
+                val b:Float = llegirFloat()
+
+                println("Introdueix el valor de c")
+                val c:Float = llegirFloat()
+
+                if (a==b&&b==c){
+                    println("El triangle és equilàter perquè $a ,$b i $c son iguals.")
+                } else if (a==b||b==c||a==c){
+                    println("El triangle és isòsceles perquè té dos costats de entre $a,$b o $c son iguals.")
+                }else if (a!=b&&b!=c){
+                    println("El triangle és un triangle escalè ja que cap del costas es igual a l'altre")
+                }
 
 
 

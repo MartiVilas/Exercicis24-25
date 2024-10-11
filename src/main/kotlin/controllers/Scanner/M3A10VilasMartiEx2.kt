@@ -1,7 +1,5 @@
 package controllers.Scanner
 import utils.*
-import java.awt.datatransfer.UnsupportedFlavorException
-import java.time.temporal.IsoFields
 import kotlin.math.*
 
 fun main() {

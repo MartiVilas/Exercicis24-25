@@ -1,7 +1,6 @@
 package controllers.Scanner
 
 import utils.*
-import javax.print.attribute.standard.PrinterURI
 
 fun main() {
 
@@ -17,6 +16,8 @@ fun main() {
 
 
     do {
+
+        var control:Boolean=true
         println("""
             Benvingut a la calculadora de números primers.
             Diguem un número major a 1 i et diré si es primer o no.
@@ -24,32 +25,44 @@ fun main() {
             Quan vulguis sortir introdueix 0.
         """.trimIndent())
         print("Digues quin número vols saber: ")
-        val opcioUsuari:Int= llegirInt()
+        var num:Int= llegirInt()
 
-        if (opcioUsuari<=1){
+        if (num<=1){
             println("${RED_BRIGHT}ERROR, HA DE SER UN NÚMERO MAJOR A 1${RESET}")
         }else{
-            println("El número és: ${PURPLE_BRIGHT}$opcioUsuari${RESET}")
+            println("El número és: ${PURPLE_BRIGHT}$num${RESET}")
+            control=false
         }
 
+        /**
+         * El següent do while el que fa es asegurarse si el número és primer o no.
+         * Si és primer, diu que es true que és primer. Si no diu que és false.
+         * @author Marti Vilas & David Marin
+         * @since 11/10/2024
+         */
 
         var bool:Boolean=true
         var iterator:Int=2
         do {
-            if (opcioUsuari%iterator==0){
+            if (num%iterator==0){
                 bool=false
-                iterator++
             }
-        }while (iterator<opcioUsuari && bool)
+            iterator++
+        }while (iterator<num && bool)
+        println("El numero $num és $bool que sigui primer.")
 
-        println("El numero $opcioUsuari és $bool que sigui primer.")
+        do {
+            num++
+            bool = true
+
+            for (i in 2 until num) {
+                if (num % i == 0) {
+                    bool = false
+                }
+            }
+        } while (!bool)
+        println("El sigüent número primer és: $num")
 
 
-
-
-    }while (bool != false)
-
-
-
-
+    }while (control)
 }

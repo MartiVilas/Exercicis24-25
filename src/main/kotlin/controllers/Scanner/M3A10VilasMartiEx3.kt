@@ -54,7 +54,6 @@ fun main() {
         do {
             num++
             bool = true
-
             for (i in 2 until num) {
                 if (num % i == 0) {
                     bool = false

@@ -1,4 +1,4 @@
-package controllers.JOEL.Iniciació01
+package controllers.JOEL.Iniciació
 
 
 fun main(){

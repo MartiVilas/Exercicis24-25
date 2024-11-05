@@ -16,6 +16,7 @@ fun main() {
         for (i in array.indices) {
             array[i] = scanner.nextInt()
         }
+
         val numCanvi1 = scanner.nextInt()
         val numCanvi2 = scanner.nextInt()
         /**

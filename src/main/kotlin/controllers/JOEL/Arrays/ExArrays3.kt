@@ -4,14 +4,22 @@ import java.util.Scanner
 
 fun main(){
     val scanner: Scanner = Scanner(System.`in`)
-    val casos: Int = scanner.nextInt()
-    var array:String
+    val numElements: Int = scanner.nextInt()
 
+    /**
+     * Creem un array de strings buit per
+     * i amb l'argument numElements per tal de indicar el tamany del array
+     */
+    var arrayStrings = arrayOfNulls<String>(numElements)
 
-    repeat(casos){
-
+    for (i in arrayStrings.indices){
+        arrayStrings[i] = scanner.nextLine()
     }
 
-
+    val numArray = scanner.nextInt()
+    for (i in arrayStrings.indices){
+        print(i)
+    }
+    println(arrayStrings[numArray])
 
 }

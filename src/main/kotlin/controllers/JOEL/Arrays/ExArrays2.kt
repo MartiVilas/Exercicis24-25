@@ -24,7 +24,9 @@ fun main(){
      */
 
     for (i in array.indices){
-        print("${array[i]} ")
-        println("${array[num]}")
+        println("${array[i]} ")
     }
+    println()
+    println("${array[num]}")
+
 }

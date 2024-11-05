@@ -10,8 +10,8 @@ fun main(){
     println("La primera lletra del nom és: ${nom[0]}")
     println()
 
-    for (i in 0..nom.length-1){
-        println("Lletra $i del nom: ${nom[i]}")
+    for (i in nom.indices){
+        println("Lletra ${i+1} del nom: ${nom[i]}")
     }
 
     println()
@@ -25,6 +25,25 @@ fun main(){
      */
     println()
     println(nom.indexOf("tí"))
+
+
+
+    val cars= arrayOf("Volvo","BMW","FORD","MAZDA")
+
+    /**
+     * En el primer ford recorremos el array,
+     * dentro del primer for tenemos otro
+     * que recorre todas las marcas de coche y las imprime letra a letra
+     * @author Martí Vilàs
+     * @since  05/11/2024
+     */
+    for (i in cars){
+        println("El cotxe és un: $i")
+        for (j in i) {
+            print("$j ")
+        }
+        println()
+    }
 
 
 }

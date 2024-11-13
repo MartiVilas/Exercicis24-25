@@ -8,7 +8,4 @@ fun main() {
     println(array.contentToString())
     println(arrayReversed.toString())
 
-
-
-
 }

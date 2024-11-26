@@ -1,7 +1,9 @@
 import utils.*
 import java.time.LocalDateTime
-import java.util.Date
 import kotlin.math.pow
+
+val date = LocalDateTime.now()
+
 
 fun main() {
 
@@ -33,7 +35,6 @@ fun main() {
 
     //Exercici6
     descompte(llegirInt())
-    var date = LocalDateTime.now()
     //Exercici7
 
 
@@ -162,6 +163,12 @@ fun descompte(num1: Int): Double {
     } else {
         res = num1.toDouble()
     }
+
+    if (date.dayOfYear == 29/11/2024){
+        res = num1* (0.5)
+    }
+
+
     return res
 }
 

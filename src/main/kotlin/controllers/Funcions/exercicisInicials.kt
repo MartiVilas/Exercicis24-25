@@ -114,7 +114,7 @@ fun calculadora(num1: Int, num2: Int): Double {
 }
 
 fun suma(num1: Int, num2: Int): Double {
-    var suma: Double = num1.toDouble() + num2
+    val suma: Double = num1.toDouble() + num2
     return suma
 }
 
@@ -136,7 +136,7 @@ fun div(num1: Int, num2: Int): Double {
 fun noNegatiu() {
     do {
         var error: Boolean = true
-        var num: Int = llegirInt()
+        val num: Int = llegirInt()
         if (num < 0) {
             println("Error el número ha de ser positivo")
         } else if (num !in 1..10) {

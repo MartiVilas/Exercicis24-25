@@ -34,7 +34,8 @@ fun main() {
     noNegatiu()
 
     //Exercici6
-    descompte(llegirInt())
+    val preu: Int = llegirInt()
+    descompte(preu)
     //Exercici7
 
 
@@ -165,7 +166,7 @@ fun descompte(num1: Int): Double {
     }
 
     if (date.dayOfYear == 29/11/2024){
-        res = num1* (0.5)
+        res = num1 * (0.5)
     }
 
 

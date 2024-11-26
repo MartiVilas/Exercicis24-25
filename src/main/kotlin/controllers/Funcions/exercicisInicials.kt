@@ -1,4 +1,6 @@
 import utils.*
+import java.time.LocalDateTime
+import java.util.Date
 import kotlin.math.pow
 
 fun main() {
@@ -31,7 +33,7 @@ fun main() {
 
     //Exercici6
     descompte(llegirInt())
-
+    var date = LocalDateTime.now()
     //Exercici7
 
 

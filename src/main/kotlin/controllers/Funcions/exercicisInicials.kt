@@ -6,41 +6,41 @@ val date = LocalDateTime.now()
 
 
 fun main() {
-/*
-    // Exercici 1
-    print("Dime un número para que te de el mismo número al cuadrado: ")
-    val num: Double = llegirDouble()
-    println("$num al cuadrado es ${pow(num)}")
 
-    //Exercici 2
-    print("Dime 2 números después te diré si el primero es mayor que el segundo")
-    val num1: Int = llegirInt()
-    val num2: Int = llegirInt()
-    println("El primer número es ${majorONo(num1, num2)} que sea mayor que el segundo")
+        // Exercici 1
+        print("Dime un número para que te de el mismo número al cuadrado: ")
+        val num: Double = llegirDouble()
+        println("$num al cuadrado es ${pow(num)}")
 
-    //Exercici 3
-    print("Dime un radio para una esfera y te calcularé su volumen")
-    val radi: Int = llegirInt()
-    println("El volumen de la esfera es: ${radioEsfera(radi.toDouble())} con un radio de $radi")
+        //Exercici 2
+        print("Dime 2 números después te diré si el primero es mayor que el segundo")
+        val num1: Int = llegirInt()
+        val num2: Int = llegirInt()
+        println("El primer número es ${majorONo(num1, num2)} que sea mayor que el segundo")
 
-    //Exercici4
-    println("Ara passem a la calculadora, digues 2 números")
-    print("Num 1: ")
-    val num1Calc: Int = llegirInt()
-    val num2Calc: Int = llegirInt()
-    calculadora(num1Calc, num2Calc)
+        //Exercici 3
+        print("Dime un radio para una esfera y te calcularé su volumen")
+        val radi: Int = llegirInt()
+        println("El volumen de la esfera es: ${radioEsfera(radi.toDouble())} con un radio de $radi")
 
-    //Exercici5
-    noNegatiu()
+        //Exercici4
+        println("Ara passem a la calculadora, digues 2 números")
+        print("Num 1: ")
+        val num1Calc: Int = llegirInt()
+        val num2Calc: Int = llegirInt()
+        calculadora(num1Calc, num2Calc)
 
-    //Exercici6
-    val preu: Int = llegirInt()
-    descompte(preu)
-*/
+        //Exercici5
+        noNegatiu()
+
+        //Exercici6
+        val preu: Int = llegirInt()
+        descompte(preu)
+
     //Exercici7
     val nens: Int = llegirInt()
     val nenes: Int = llegirInt()
-    for(i in percNensNenes(nenes,nens)){
+    for (i in percNensNenes(nens, nenes)) {
         println(i)
     }
 }
@@ -180,14 +180,11 @@ fun descompte(num1: Int): Double {
 fun percNensNenes(num1: Int, num2: Int): IntArray {
     val total = num1 + num2
     var arrayPerc = IntArray(2)
-    val totalNens = (num1/total)*100
-    val totalNenes = (num2/total)*100
-    for (i in arrayPerc){
-        if (i==1){
-            arrayPerc+=totalNens
-        }else{
-            arrayPerc+=totalNenes
-        }
-    }
+    val totalNens: Int = (num1 * 100) / total
+    val totalNenes: Int = (num2 * 100) / total
+
+    arrayPerc[0] = totalNens
+    arrayPerc[1] = totalNenes
+
     return arrayPerc
 }

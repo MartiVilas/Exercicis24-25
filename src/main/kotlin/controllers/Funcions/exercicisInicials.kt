@@ -6,36 +6,36 @@ val date = LocalDateTime.now()
 
 
 fun main() {
+/*
+    // Exercici 1
+    print("Dime un número para que te de el mismo número al cuadrado: ")
+    val num: Double = llegirDouble()
+    println("$num al cuadrado es ${pow(num)}")
 
-        // Exercici 1
-        print("Dime un número para que te de el mismo número al cuadrado: ")
-        val num: Double = llegirDouble()
-        println("$num al cuadrado es ${pow(num)}")
+    //Exercici 2
+    print("Dime 2 números después te diré si el primero es mayor que el segundo")
+    val num1: Int = llegirInt()
+    val num2: Int = llegirInt()
+    println("El primer número es ${majorONo(num1, num2)} que sea mayor que el segundo")
 
-        //Exercici 2
-        print("Dime 2 números después te diré si el primero es mayor que el segundo")
-        val num1: Int = llegirInt()
-        val num2: Int = llegirInt()
-        println("El primer número es ${majorONo(num1, num2)} que sea mayor que el segundo")
+    //Exercici 3
+    print("Dime un radio para una esfera y te calcularé su volumen")
+    val radi: Int = llegirInt()
+    println("El volumen de la esfera es: ${radioEsfera(radi.toDouble())} con un radio de $radi")
 
-        //Exercici 3
-        print("Dime un radio para una esfera y te calcularé su volumen")
-        val radi: Int = llegirInt()
-        println("El volumen de la esfera es: ${radioEsfera(radi.toDouble())} con un radio de $radi")
+    //Exercici4
+    println("Ara passem a la calculadora, digues 2 números")
+    print("Num 1: ")
+    val num1Calc: Int = llegirInt()
+    val num2Calc: Int = llegirInt()
+    calculadora(num1Calc, num2Calc)
 
-        //Exercici4
-        println("Ara passem a la calculadora, digues 2 números")
-        print("Num 1: ")
-        val num1Calc: Int = llegirInt()
-        val num2Calc: Int = llegirInt()
-        calculadora(num1Calc, num2Calc)
+    //Exercici5
+    noNegatiu()
 
-        //Exercici5
-        noNegatiu()
-
-        //Exercici6
-        val preu: Int = llegirInt()
-        descompte(preu)
+    //Exercici6
+    val preu: Int = llegirInt()
+    descompte(preu)
 
     //Exercici7
     val nens: Int = llegirInt()
@@ -43,6 +43,11 @@ fun main() {
     for (i in percNensNenes(nens, nenes)) {
         println(i)
     }
+*/
+    //Exercici 8
+    var preu: Double = llegirDouble()
+    preuFigura(preu)
+
 }
 
 fun pow(num: Double): Double {
@@ -187,4 +192,25 @@ fun percNensNenes(num1: Int, num2: Int): IntArray {
     arrayPerc[1] = totalNenes
 
     return arrayPerc
+}
+
+fun bonEstat(bool: Boolean): Boolean{
+    var res = false
+    if (bool){
+        res = true
+    }
+
+    return res
+}
+
+fun preuFigura(preu: Double): Double{
+    println("Esta la teva figura en bon estat?")
+    val ESTAT: Boolean= bonEstat(llegirSioNo())
+    var preu: Double = preu
+    if (ESTAT){
+        preu += (preu * 0.25)
+    }else{
+        preu += (preu * 0.1)
+    }
+    return preu
 }

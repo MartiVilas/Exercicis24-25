@@ -1,6 +1,6 @@
 package utils
 
-/** Document kt dedicat al emmagatzematge de les dades que s'han d'usar per tal de posar colors als menús.
+/** Document kt dedicat a l'emmagatzematge de les dades que s'han d'usar per tal de posar colors als menús.
  * @author Raimon Izard
  */
 
@@ -17,6 +17,8 @@ const val BLUE: String = "\u001b[0;34m" // BLUE
 const val PURPLE: String = "\u001b[0;35m" // PURPLE
 const val CYAN: String = "\u001b[0;36m" // CYAN
 const val WHITE: String = "\u001b[0;37m" // WHITE
+const val ORANGE: String = "\u001b[38;2;255;165;0m" // ORANGE
+const val LIME: String = "\u001b[38;2;225;255;145m" // LIME
 
 // Bold
 const val BLACK_BOLD: String = "\u001b[1;30m" // BLACK
@@ -27,6 +29,8 @@ const val BLUE_BOLD: String = "\u001b[1;34m" // BLUE
 const val PURPLE_BOLD: String = "\u001b[1;35m" // PURPLE
 const val CYAN_BOLD: String = "\u001b[1;36m" // CYAN
 const val WHITE_BOLD: String = "\u001b[1;37m" // WHITE
+const val ORANGE_BOLD: String = "\u001b[1;38;2;255;165;0m" // ORANGE
+const val LIME_BOLD: String = "\u001b[1;38;2;225;255;145m" // LIME
 
 // Underline
 const val BLACK_UNDERLINED: String = "\u001b[4;30m" // BLACK
@@ -48,6 +52,7 @@ const val PURPLE_BACKGROUND: String = "\u001b[45m" // PURPLE
 const val CYAN_BACKGROUND: String = "\u001b[46m" // CYAN
 const val WHITE_BACKGROUND: String = "\u001b[47m" // WHITE
 
+
 // High Intensity
 const val BLACK_BRIGHT: String = "\u001b[0;90m" // BLACK
 const val RED_BRIGHT: String = "\u001b[0;91m" // RED
@@ -57,6 +62,7 @@ const val BLUE_BRIGHT: String = "\u001b[0;94m" // BLUE
 const val PURPLE_BRIGHT: String = "\u001b[0;95m" // PURPLE
 const val CYAN_BRIGHT: String = "\u001b[0;96m" // CYAN
 const val WHITE_BRIGHT: String = "\u001b[0;97m" // WHITE
+const val LIME_BRIGHT: String = "\u001b[38;2;255;255;180m" // LIME
 
 // Bold High Intensity
 const val BLACK_BOLD_BRIGHT: String = "\u001b[1;90m" // BLACK

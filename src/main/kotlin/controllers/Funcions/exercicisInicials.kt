@@ -6,7 +6,7 @@ val date = LocalDateTime.now()
 
 
 fun main() {
-
+/*
     // Exercici 1
     print("Dime un número para que te de el mismo número al cuadrado: ")
     val num: Double = llegirDouble()
@@ -36,9 +36,13 @@ fun main() {
     //Exercici6
     val preu: Int = llegirInt()
     descompte(preu)
+*/
     //Exercici7
-
-
+    val nens: Int = llegirInt()
+    val nenes: Int = llegirInt()
+    for(i in percNensNenes(nenes,nens)){
+        println(i)
+    }
 }
 
 fun pow(num: Double): Double {
@@ -165,7 +169,7 @@ fun descompte(num1: Int): Double {
         res = num1.toDouble()
     }
 
-    if (date.dayOfYear == 29/11/2024){
+    if (date.dayOfYear == 29 / 11 / 2024) {
         res = num1 * (0.5)
     }
 
@@ -173,3 +177,17 @@ fun descompte(num1: Int): Double {
     return res
 }
 
+fun percNensNenes(num1: Int, num2: Int): IntArray {
+    val total = num1 + num2
+    var arrayPerc = IntArray(2)
+    val totalNens = (num1/total)*100
+    val totalNenes = (num2/total)*100
+    for (i in arrayPerc){
+        if (i==1){
+            arrayPerc+=totalNens
+        }else{
+            arrayPerc+=totalNenes
+        }
+    }
+    return arrayPerc
+}

@@ -139,6 +139,7 @@ fun main() {
                 for (fila in matriu.indices){
                     for (columna in matriu.indices){
                         if(fila == filaReserva){
+
                             matriu[filaReserva-1][colReserva-1]= "R"
                         }
                     }

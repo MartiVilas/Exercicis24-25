@@ -1,11 +1,53 @@
 package controllers.recursivitat
 
-//EXERCICI 1
+import utils.llegirInt
+
+
+fun main(){
 /*
-fun main() {
-    val numero: Int = 5
-    val resultat: Int = factorial(numero)
-    println("El factorial de $numero és: $factorial")
+    var sortida: Boolean = false
+    do {
+        println("""
+            MENU RECURSIU
+            1. Ex1
+            2. Ex2
+            3. Ex3
+            4. Ex4
+            5. Ex5
+            6. Ex6
+            7. Sortir
+        """.trimIndent())
+        val numero: Int = llegirInt()
+        when(numero){
+            1-> {
+                factorial(numero)
+            }
+            2-> {
+                dobleFactorial(numero)
+            }
+            3-> {
+                numeroXifres(numero)
+            }
+            4-> {
+                numInvertit(numero)
+            }
+            5-> {
+                fibonacci(numero)
+            }
+            6-> {
+                numeroCreixent(numero)
+            }
+            else -> {
+                println("Adéu!")
+                sortida = true
+            }
+        }
+    }while (!sortida)
+*/
+
+
+    reduccioDeDigits(5699)
+
 }
 
 fun factorial(numero: Int, acumulat: Int = 1): Int {
@@ -15,15 +57,6 @@ fun factorial(numero: Int, acumulat: Int = 1): Int {
         return factorial(numero - 1, acumulat * numero)
     }
 }
-*/
-
-//EXERCICI 2
-/*
-fun main(){
-    val numero: Int = 2
-    val resultat: Int = dobleFactorial(numero)
-    println("El doble factorial de $numero és: $resultat")
-}
 
 fun dobleFactorial(numero: Int): Int{
     if (numero <= 1){
@@ -32,31 +65,13 @@ fun dobleFactorial(numero: Int): Int{
         return numero * dobleFactorial(numero - 2)
     }
 }
-*/
-
-//EXERCICI 3
-/*
-fun main(){
-    val numero: Int = 666850380
-    val resultat: Int = numeroXifres(numero)
-    println("El número de xifres que té el $numero és: $resultat")
-}
 
 fun numeroXifres(numero: Int): Int{
-    if (numero < 10){
+    if (numero/10 <= 0){
         return 1
     }else{
         return 1 + numeroXifres(numero/10)
     }
-}
-*/
-
-//EXERCICI 4
-/*
-fun main(){
-    var numero: Int = 1234
-    val resultat: Int = numInvertit(numero)
-    println("El número invertit del número $numero és: $resultat")
 }
 
 fun numInvertit(numero: Int, invertit: Int = 0): Int{
@@ -66,15 +81,6 @@ fun numInvertit(numero: Int, invertit: Int = 0): Int{
     return numInvertit(numero / 10, invertit * 10 + numero % 10)
     }
 }
-*/
-
-//EXERCICI 5
-/*
-fun main(){
-    val numero: Int = 4
-    val resultat: Int = fibonacci(numero)
-    println("La successió de Fibonacci del número $numero és: $resultat")
-}
 
 fun fibonacci(numero: Int): Int{
     when(numero){
@@ -82,15 +88,6 @@ fun fibonacci(numero: Int): Int{
         1 -> return 1
         else -> return fibonacci(numero - 1) + fibonacci(numero - 2)
     }
-}
-*/
-
-//EXERCICI 6
-
-fun main(){
-    val numero: Int = 303333445
-    val resultat: Boolean = numeroCreixent(numero)
-    println("El número $numero és creixent? $resultat")
 }
 
 fun numeroCreixent(numero: Int): Boolean{
@@ -105,4 +102,19 @@ fun numeroCreixent(numero: Int): Boolean{
         return false
     }
     return numeroCreixent(numero / 10)
+}
+
+fun reduccioDeDigits(numero:Int) {
+    val llistaNumeros: MutableList<Int> = mutableListOf()
+    var suma:Int = 0
+
+    if (numero<10){
+        print(suma)
+    }else{
+        llistaNumeros.add(numero%10)
+    }
+    for (i in llistaNumeros){
+        suma += i
+    }
+
 }

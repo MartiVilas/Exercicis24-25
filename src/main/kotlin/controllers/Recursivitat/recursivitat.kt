@@ -22,3 +22,4 @@ fun trobarRandom(numRand: Int) {
         return println("Correcte el número era $numRand")
     }
 }
+
